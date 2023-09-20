@@ -35,27 +35,27 @@ public class main {
         System.out.println("The index of the second space:" + secondSpace);
 
         int thirdSpace = userText.indexOf(" ", secondSpace + 1);
-        System.out.println("The index of third space:" + secondSpace);
+        System.out.println("The index of third space:" + thirdSpace);
 
-        System.out.println("Text between the first space and second: " + userText.substring(firstSpace + 1, secondSpace));
+        System.out.println("Text between the first space and second: " + userText.substring(firstSpace, secondSpace));
         newScanner.nextLine();
 
-        System.out.println("Text between the second space and third: " + userText.substring(secondSpace + 1, thirdSpace));
+        System.out.println("Text between the second space and third: " + userText.substring(secondSpace, thirdSpace));
         newScanner.nextLine();
 
-        System.out.println("Text between the first space and third:" + userText.substring(firstSpace + 1, thirdSpace));
+        System.out.println("Text between the first space and third:" + userText.substring(firstSpace, thirdSpace));
 
         // even year
         System.out.println("Your age? ");
         int age = newScanner.nextInt();
 
-        int checkAge = age % 2;
+        boolean checkAge = age % 2 == 0;
         int evenAge = age + 2;
         int oddAge = age + 1;
 
-        if (checkAge == 0) {
+        if (checkAge) {
             System.out.println("You will fill " + evenAge + " in two years.");
-        } else if (checkAge == 1) {
+        }else {
             System.out.println("You will fill " + oddAge + " in one year.");
         }
 
